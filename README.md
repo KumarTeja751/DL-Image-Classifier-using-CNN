@@ -38,9 +38,9 @@ Optionally, display a confusion matrix or sample predictions.
 
 ## PROGRAM
 
-### Name: SRISHANTH J
+### Name: KUMARTEJA N
 
-### Register Number: 212223240160
+### Register Number: 212223230132
 
 ```python
 import torch
@@ -110,8 +110,8 @@ if torch.cuda.is_available():
     model.to(device)
 
 # Print model summary
-print('Name: HARIHARAN J')
-print('Register Number: 212223240047')
+print('Name: KUMARTEJA N')
+print('Register Number: 212223230132')
 summary(model, input_size=(1, 28, 28))
 
 # Initialize model, loss function, and optimizer
@@ -138,8 +138,8 @@ def train_model(model, train_loader, num_epochs=10):
             loss.backward()
             optimizer.step()
             running_loss += loss.item()
-        print('Name: HARIHARAN J')
-        print('Register Number: 212223240047')
+        print('Name: KUMARTEJA N')
+        print('Register Number: 212223230132')
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {running_loss/len(train_loader):.4f}')
 
 # Train the model
@@ -167,22 +167,22 @@ def test_model(model, test_loader):
             all_labels.extend(labels.cpu().numpy())
 
     accuracy = correct / total
-    print('Name: ')
-    print('Register Number: ')
+    print('Name: KUMARTEJA N')
+    print('Register Number: 212223230132')
     print(f'Test Accuracy: {accuracy:.4f}')
     # Compute confusion matrix
     cm = confusion_matrix(all_labels, all_preds)
     plt.figure(figsize=(8, 6))
-    print('Name: ')
-    print('Register Number: ')
+    print('Name: KUMARTEJA N')
+    print('Register Number: 212223230132')
     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=test_dataset.classes, yticklabels=test_dataset.classes)
     plt.xlabel('Predicted')
     plt.ylabel('Actual')
     plt.title('Confusion Matrix')
     plt.show()
     # Print classification report
-    print('Name: HARIHARAN J')
-    print('Register Number: 212223240047')
+    print('Name: KUMARTEJA N')
+    print('Register Number: 212223230132')
     print("Classification Report:")
     print(classification_report(all_labels, all_preds, target_names=[str(i) for i in range(10)]))
 
@@ -202,8 +202,8 @@ def predict_image(model, image_index, dataset):
 
     class_names = [str(i) for i in range(10)]
 
-    print('Name: HARIHARAN J')
-    print('Register Number: 212223240047')
+    print('Name: KUMARTEJA N')
+    print('Register Number: 212223230132')
     plt.imshow(image.cpu().squeeze(), cmap="gray")
     plt.title(f'Actual: {class_names[label]}\nPredicted: {class_names[predicted.item()]}')
     plt.axis("off")
